@@ -10,6 +10,7 @@ table {
     background-color: #8abef1;
     border-radius: 7px;
     border-width: thick;
+    font-family: 'Permanent Marker', cursive;
 }
 
 th {
@@ -82,8 +83,6 @@ th, td {
    border-radius: 50%;
    max-width: 100%;
 }
-
-
 
 .odd {
     background-color: #c0d5eb;

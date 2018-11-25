@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>Richard's Blog</title>
+        <meta charset = "UTF-8" />
+        <link rel="stylesheet" href="sprint-2.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    </head>
+    <body>
+        <h1>What does it mean to display inline vs inline blocks</h1>
+        <h3>Inline Elements</h3>
+        <ol>
+            <li>respect left & right margins and padding, but not top & bottom</li>
+            <li>cannot have a width and height set</li>
+            <li>allow other elements to sit to their left and right.</li>
+        </ol>
+
+    <div class="inline-wrapper">    
+        <div class="inline-example">
+            <div class="inline-div">
+            Inline Div1
+            </div>
+            <div class="inline-div">
+            Inline Div2
+            </div>
+            <div class="inline-div">
+            Inline Div3
+            </div>
+            <div class="inline-div">
+            Inline Div4
+            </div>
+            <div class="inline-div">
+            Inline Div5
+            </div>
+            <div class="inline-div">
+            Inline Div6
+            </div>
+            <br>
+            <br>
+            <div class="inline-div">
+            Inline Div7
+            </div>
+            <br>
+            <div class="inline-div">
+            Inline Div8
+            </div>
+        </div>
+        <div class="inline-code">
+            <p>Doesn't respect padding-top, padding-bottom, width and height</p>
+            <p>.inline-div {<br>border: solid 1px blue;<br>display:inline;<br><strike>padding-top: 3px;</strike>
+            <br><strike>padding-bottom: 3px;</strike><br><strike>width: 110px;</strike><br><strike>height: 30px;</strike><br>}</p>
+        </div>
+    </div>    
+
+        <h3>Inline-Block Elements</h3>
+        <ol>
+            <li>allow other elements to sit to their left and right</li>
+            <li>respect top & bottom margins and padding</li>
+            <li>respect height and width</li>
+        </ol>
+
+    <div class="inline-block-wrapper">    
+        <div class="inline-block-example">
+            <div class="inline-block-div">
+            Inline Block Div1
+            </div>
+            <div class="inline-block-div">
+            Inline Block Div2
+            </div>
+            <div class="inline-block-div">
+            Inline Block Div3
+            </div>
+            <div class="inline-block-div">
+            Inline Block Div4
+            </div>
+            <div class="inline-block-div">
+            Inline Block Div5
+            </div>
+            <div class="inline-block-div">
+            Inline Block Div6
+            </div>
+            <br>
+            <br>
+            <div class="inline-block-div">
+            Inline Block Div7
+            </div>
+            <br>
+            <div class="inline-block-div">
+            Inline Block Div8
+            </div>
+        </div>
+        <div class="inline-block-code">
+            <p>Respects padding-top, padding-bottom, width and height</p>
+            <p>.inline-block-div {<br>border: solid 1px blue;<br>display:inline;<br>padding-top: 3px;
+            <br>padding-bottom: 3px;<br>width: 110px;<br>height: 30px;<br>}</p>
+        </div>
+    </div>    
