@@ -29,25 +29,30 @@ th, td {
     border-width: thick;
 }
 
-.navbar li {
-    text-align: right;
-    list-style-type: none;
+.wrapper li {
+    list-style: none;
+    margin: 0px 30px;
+    display: inline-block;
+    font-size: 40px;
+    padding: 20px 20px;
+    color: black;
+    transition: .5s;
+    float: right;
     font-family: 'Permanent Marker', cursive;
-    font-size: 2.5rem;
 }
 
-.navbar li a {
-text-decoration: none;
-width: 100px;
-padding: 8px 30px;
-border-radius: 7px; 
+.wrapper li:link {color: black}
+.wrapper li:hover {color: white}
+
+.wrapper a {
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: none;
 }
 
-.navbar li a:visited {color: black}
-.navbar li a:hover {
-    color: white;
-}
-.navbar li a:active {color: black}
+.wrapper a:link {color: black}
+.wrapper a:visited {color: black}
+.wrapper a:hover {color: white}
+
 
 .text-box {
     text-align: center;
