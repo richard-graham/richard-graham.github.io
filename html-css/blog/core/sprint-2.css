@@ -1,0 +1,21 @@
+body {
+    width: 600px;
+    margin: 0px auto 0px auto;
+    background-image: url(./full-bloom.png);
+    background-repeat: repeat;
+    padding: 0px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h1, h3, h5 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+h3  {
+    font-size: 16pt;
+}
+
+h5 {
+    font-size: 12pt;
+}
+
