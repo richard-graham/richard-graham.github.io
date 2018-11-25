@@ -1,0 +1,85 @@
+
+
+table {
+    margin: auto;
+    width: 50%;
+    border: 1rem solid yellow;
+    background-color: #8abef1;
+    border-radius: 7px;
+    border-width: thick;
+}
+
+th {
+    font-size: 1.25rem;
+}
+th, td {
+    padding: 20px 100px;
+    text-align: center;
+}
+
+.navbar {
+    width: 99.62%;
+    background-color: #8abef1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: solid;
+    border-radius: 7px;
+    border-color: yellow;
+    border-width: thick;
+}
+
+.navbar li {
+    text-align: right;
+    list-style-type: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+}
+
+.navbar li a {
+text-decoration: none;
+width: 100px;
+padding: 8px 30px;
+border-radius: 7px; 
+}
+
+.navbar li a:visited {color: black}
+.navbar li a:hover {
+    color: white;
+}
+.navbar li a:active {color: black}
+
+.text-box {
+    text-align: center;
+}
+
+.text-box h1 {
+    padding-top: 40px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 6rem;
+}
+
+.text-box h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    padding: 30px 0px;
+}
+
+.image-container {
+    margin: auto;
+    width: 43%;
+}
+
+.image-main {
+   border-radius: 50%;
+   max-width: 100%;
+}
+
+
+
+.odd {
+    background-color: #c0d5eb;
+}
+
+
+
