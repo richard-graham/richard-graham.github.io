@@ -1,0 +1,17 @@
+.carousel {
+    height:100;
+    align-content: center;
+  }
+
+.carousel-caption {
+    transform: translateY(-50%);
+    bottom: 0;
+    top: 35%;
+}
+
+.carousel-caption h5 {
+    font-size: 100px;
+    color: blue;
+
+}
+
