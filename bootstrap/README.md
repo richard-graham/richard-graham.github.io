@@ -1,1 +1,0 @@
-# richard-graham.github.io
