@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', startGame);
 document.addEventListener('click', checkForWin);
 document.addEventListener('contextmenu', checkForWin);
-document.addEventListener('click', startAudio());
 
-var firstClick = false;
 
-function startAudio() {
-  if (!firstClick) {
-    document.getElementById('backgroundAudio').play();
-    console.log('running')
-    firstClick = true;
-  }
-} 
+let audio = null;
+
+function runAudio() {
+let audio = new Audio('./audio/background.wav');
+audio.play();
+}
+
+function stopAudio() {
+  audio = null;
+}
+
 
 
 function createBoard(row, col) {
