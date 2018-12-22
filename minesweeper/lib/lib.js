@@ -71,7 +71,7 @@ function showCell (evt) {
   evt.target.classList.remove('hidden')
   evt.target.classList.remove('marked')
   if (evt.target.classList.contains('mine')) {
-    displayMessage('BOOM!')
+    displayMessage('You lost but you found Jesus!')
 
     revealMines()
     removeListeners()
@@ -194,9 +194,9 @@ function getUpperBound (n) {
 
 function displayMessage (msg, id) {
   document.getElementById(id || 'message').innerHTML = '<p id="newMessage">' + msg + '</p>'
-  if (msg === 'BOOM!') {
-    document.getElementById(id || 'message').setAttribute('style', 'font-size: 8rem; margin: 0px; border: 0px; height: 205px;')
-    document.getElementById('newMessage').setAttribute('style', 'margin-top: 27px; color: red; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;')
+  if (msg === 'You lost but you found Jesus!') {
+    document.getElementById(id || 'message').setAttribute('style', 'font-size: 4rem; margin: 0px; border: 0px; height: 205px;')
+    document.getElementById('newMessage').setAttribute('style', 'margin-top: 60px; color: red; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;')
     document.getElementById('bombSound').play();
   }
 }
