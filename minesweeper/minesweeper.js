@@ -3,16 +3,13 @@ document.addEventListener('click', checkForWin);
 document.addEventListener('contextmenu', checkForWin);
 
 
-let audio = null;
 
 function runAudio() {
 let audio = new Audio('./audio/background.wav');
 audio.play();
 }
 
-function stopAudio() {
-  audio = null;
-}
+
 
 
 
@@ -71,7 +68,7 @@ function checkForWin () {
   }
   console.log(counter)
   if (counter === board.cells.length) {
-    lib.displayMessage('You failed to find Jesus!')
+    lib.displayMessage('You won! But you failed to find Jesus :(.')
   }
   runAudio();
   // You can use this function call to declare a winner (once you've
