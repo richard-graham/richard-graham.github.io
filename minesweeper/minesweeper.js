@@ -1,23 +1,18 @@
 document.addEventListener('DOMContentLoaded', startGame);
-document.addEventListener('click', checkForWin, startAudio());
-
+document.addEventListener('click', checkForWin);
 document.addEventListener('contextmenu', checkForWin);
+document.addEventListener('click', startAudio());
 
+var firstClick = false;
 
-// Define your `board` object here!
-/*var board = {
-  cells: [
-    {row: 0, col: 0, isMine: false, isMarked: false, hidden: true},
-    {row: 1, col: 0, isMine: false, isMarked: false, hidden: true},
-    {row: 2, col: 0, isMine: true, isMarked: false, hidden: true},
-    {row: 0, col: 1, isMine: false, isMarked: false, hidden: true},
-    {row: 1, col: 1, isMine: true, isMarked: false, hidden: true},
-    {row: 2, col: 1, isMine: false, isMarked: false, hidden: true},
-    {row: 0, col: 2, isMine: false, isMarked: false, hidden: true},
-    {row: 1, col: 2, isMine: true, isMarked: false, hidden: true},
-    {row: 2, col: 2, isMine: false, isMarked: false, hidden: true},
-  ]
-};*/
+function startAudio() {
+  if (!firstClick) {
+    document.getElementById('backgroundAudio').play();
+    console.log('running')
+    firstClick = true;
+  }
+} 
+
 
 function createBoard(row, col) {
   var board = {};

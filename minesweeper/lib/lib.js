@@ -254,17 +254,6 @@ function getNodeByCoordinates (row, col) {
   return document.getElementsByClassName(rowClass + ' ' + colClass)[0]
 }
 
-document.addEventListener('click', startAudio());
-
-var firstClick = false;
-
-function startAudio() {
-  if (!firstClick) {
-    document.getElementById('backgroundAudio').play()
-    console.log('running')
-    firstClick = true;
-  }
-} 
 
 
 
