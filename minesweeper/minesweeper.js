@@ -73,6 +73,7 @@ function checkForWin () {
   if (counter === board.cells.length) {
     lib.displayMessage('You failed to find Jesus!')
   }
+  runAudio();
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
