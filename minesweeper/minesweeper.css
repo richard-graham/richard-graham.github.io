@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'hellText';
+  src: url("./metallord.ttf")
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-center;
+  flex-direction: column;
+  background-image: url("images/hell.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#message, #notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message {
+  font-size: 4rem;
+  font-family: "hellText";
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board div {
+  color: green;
+  font-size: 2rem;
+  width: 75px;
+  height: 75px;
+  border: 1px #ccc dotted;
+  border-radius: 10%;
+  background-color: white;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board div:hover {
+  background-color: white;
+}
+
+div.mine, div.mine:hover {
+  background: no-repeat center/100% url("images/jesus.jpg");
+}
+
+div.hidden {
+  background: #eee;
+}
+
+div.hidden:hover {
+  background: #ccc;
+}
+
+div.marked, div.marked:hover {
+  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+}
+
+.restart {
+  padding: 15px;
+  margin-top: 20px;
+  font-family: "hellText";
+  font-size: 1.2rem;
+}
+
+.restart:hover {
+  background-color: red;
+}
+
