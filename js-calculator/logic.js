@@ -22,7 +22,7 @@ function inputNumber(digit) {
     if (calc.isEqualled) { // if the last button pressed was equals
         calcInit()
     }
-    if (digit === '.' && calc.currentVal.includes('.')) { //if there is already a '.' in the currentVal
+    if (digit === '.' && calc.currentVal.includes('.')) { 
         return; //exit
     }
     if (digit === '.' && !isNumber(calc.currentVal)) { //if there is an operator in currentVal and the next input is '.' make it '0.'
@@ -48,17 +48,15 @@ function inputOperator (operator) {
     }
     if (calc.operator === null) { //this runs the first time an operator is entered or after AC is hit
         calc.firstNumber = calc.currentVal; 
-    } 
-    else if (calc.isEqualled === true) { //if the last button pressed was equals
-        calc.secondNumber = calc.currentVal // combine else if and else statements so the shared functions are put into one, then check if equals is true and do the other steps    
+    } else { //if currentVal is number and 
+        calc.secondNumber = calc.currentVal //
         output = doMathStuff(calc.firstNumber, calc.secondNumber, calc.operator) 
         calc.firstNumber = output.toString();
+
+        if (calc.isEqualled === true) { //if the last button pressed was equals
         calc.equation = calc.firstNumber;
         calc.isEqualled = false;
-    } else {
-        calc.secondNumber = calc.currentVal
-        output = doMathStuff(calc.firstNumber, calc.secondNumber, calc.operator)
-        calc.firstNumber = output.toString();
+        }
     }
     replaceOperatorAndVal(operator);
     calc.equation += (` ${operator} `);
@@ -142,8 +140,6 @@ document.getElementById('equals').addEventListener('click', function() {
 
 document.querySelectorAll('button').forEach(function(el){el.addEventListener('click', function() {
     updateEquation(this.value);
-    console.log('currentVal:', calc.currentVal)
-    console.log('equation:', calc.equation)
 })})
 
 document.getElementById('clear').addEventListener('click', function() {
