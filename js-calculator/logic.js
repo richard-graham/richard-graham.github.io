@@ -1,5 +1,3 @@
-https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
-
 document.addEventListener('DOMContentLoaded', function() {
     calcInit();
 }, false);
@@ -19,57 +17,56 @@ function calcInit() {
 }
 
 function inputNumber(digit) {
-    if (calc.isEqualled) { // if the last button pressed was equals
+    if (calc.isEqualled) {                                                      // if the last button pressed was equals
         calcInit()
     }
     if (digit === '.' && calc.currentVal.includes('.')) { 
-        return; //exit
+        return;                                                                 //exit
     }
-    if (digit === '.' && !isNumber(calc.currentVal)) { //if there is an operator in currentVal and the next input is '.' make it '0.'
+    if (digit === '.' && !isNumber(calc.currentVal)) {                          //if there is an operator in currentVal and the next input is '.' make it '0.'
         calc.currentVal = '0.'
         digit = '0.'
-    } else if (calc.currentVal === '0.') {//'0.' is not a number so we need to specifically say if the currentVal is '0.' then add new digit to the end of the currentVal
+    } else if (calc.currentVal === '0.') {                                      //'0.' is not a number so we need to specifically say if the currentVal is '0.' then add new digit to the end of the currentVal
         calc.currentVal += digit
-    } else if (calc.currentVal === calc.operator) {//if last digit was an operator replace it rather than add digit to the end of it
+    } else if (calc.currentVal === calc.operator) {                             //if last digit was an operator replace it rather than add digit to the end of it
         calc.currentVal = digit
-     } else {// otherwise just pop the digit on the end
-    calc.currentVal += digit; 
+    } else {                                                                    // otherwise just pop the digit on the end
+        calc.currentVal += digit; 
     }
     calc.equation += digit;
 }
 
 function inputOperator (operator) {
     let output = 0; 
-    if (!isNumber(calc.currentVal)) { //if currentVal is not a number (i.e the the last value entered was an operator)
+    if (!isNumber(calc.currentVal)) {                                           //if currentVal is not a number (i.e the the last value entered was an operator)
         replaceOperatorAndVal(operator);
-        calc.equation = calc.equation.substring(0, calc.equation.length - 3); //removes last operator from the equation string
-        calc.equation += (` ${operator} `); //adds new operator on the end
+        calc.equation = calc.equation.substring(0, calc.equation.length - 3);   //removes last operator from the equation string
+        calc.equation += (` ${operator} `);                                     //adds new operator on the end
         return;
     }
-    if (calc.operator === null) { //this runs the first time an operator is entered or after AC is hit
+    if (calc.operator === null) {                                               //this runs the first time an operator is entered or after AC is hit
         calc.firstNumber = calc.currentVal; 
-    } else { //if currentVal is number and 
-        calc.secondNumber = calc.currentVal //
+    } else {                                                                    //if currentVal is number and 
+        calc.secondNumber = calc.currentVal 
         output = doMathStuff(calc.firstNumber, calc.secondNumber, calc.operator) 
         calc.firstNumber = output.toString();
-
-        if (calc.isEqualled === true) { //if the last button pressed was equals
-        calc.equation = calc.firstNumber;
-        calc.isEqualled = false;
+        if (calc.isEqualled === true) {                                         //if the last button pressed was equals
+            calc.equation = calc.firstNumber;
+            calc.isEqualled = false;
         }
     }
     replaceOperatorAndVal(operator);
     calc.equation += (` ${operator} `);
 }
 
-function inputEquals(value) { //when equals is pressed do this stuff
+function inputEquals(value) {                                                   //when equals is pressed do this stuff
     var output = 0;
     calc.secondNumber = calc.currentVal;
     output = doMathStuff(calc.firstNumber, calc.secondNumber, calc.operator)
     calc.displayValue = output;
     calc.equation += (` ${value} ${output.toString()}`)
     document.getElementById('outputDisplay').innerHTML = calc.displayValue;
-    calc.isEqualled = true; //this is how other functions know equals was the last thing pressed
+    calc.isEqualled = true;                                                     //this is how other functions know equals was the last thing pressed
 }
 
 //reusable functions that the main functions rely on
