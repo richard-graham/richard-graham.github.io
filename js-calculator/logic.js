@@ -50,7 +50,7 @@ function inputOperator (operator) {
         calc.firstNumber = calc.currentVal; 
     } 
     else if (calc.isEqualled === true) { //if the last button pressed was equals
-        calc.secondNumber = calc.currentVal // combine else if and else statements so the shared functions are put into one, then check if equals is true and do the other steps
+        calc.secondNumber = calc.currentVal // combine else if and else statements so the shared functions are put into one, then check if equals is true and do the other steps    
         output = doMathStuff(calc.firstNumber, calc.secondNumber, calc.operator) 
         calc.firstNumber = output.toString();
         calc.equation = calc.firstNumber;
