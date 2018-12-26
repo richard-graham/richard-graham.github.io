@@ -42,7 +42,7 @@ function inputOperator (operator) {
         replaceOperatorAndVal(operator);
         calc.equation = calc.equation.substring(0, calc.equation.length - 3);   //removes last operator from the equation string
         calc.equation += (` ${operator} `);                                     //adds new operator on the end
-        return;
+        return;                 
     }
     if (calc.operator === null) {                                               //this runs the first time an operator is entered or after AC is hit
         calc.firstNumber = calc.currentVal; 

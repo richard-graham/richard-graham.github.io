@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/main2.css" type="text/css">
+    <link href="">
+    <title>Richard's Blog</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Core</a></li>
+            <li><a href="#">Technical</a></li>
+        </ul>
+    </nav>
+    <div class="grid-wrapper">
+        <div class="item-1">
+            <div class="sidebar-header">
+                <h1 id=>My dev Academy journey</h1>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    /*$(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+            $('nav').addClass('black');
+        } else {
+            $('nav').removeClass('black');
+        }
+    })*/
+
+var stickyTop = $('.sidebar-header').offset().top;
+
+$(window).on( 'scroll', function(){
+        if ($(window).scrollTop() >= stickyTop) {
+            $('.sidebar-header').css({position: "fixed", top: "0px"});
+        } else {
+            $('.sidebar-header').css({position: "relative", top: "0px"});
+        }
+    });
+});
+</script>
+</html>
